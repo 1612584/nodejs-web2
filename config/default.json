@@ -3,7 +3,8 @@
       "host": "remotemysql.com",
       "user": "zESNnM745D",
       "password": "qHfenUThBm",
-      "database": "zESNnM745D"
+      "database": "zESNnM745D",
+      "connectionLimit":5
     },
     "paginate": {
       "default": 6
