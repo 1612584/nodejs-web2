@@ -1,0 +1,11 @@
+{
+    "mysql": {
+      "host": "remotemysql.com",
+      "user": "zESNnM745D",
+      "password": "qHfenUThBm",
+      "database": "zESNnM745D"
+    },
+    "paginate": {
+      "default": 6
+    }
+  }
