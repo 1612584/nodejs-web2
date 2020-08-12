@@ -101,9 +101,8 @@ module.exports = {
 
   add: (tableName, entity) => {
     return new Promise((resolve, reject) => {
-      var connection = createConnection();
+  
       var sql = `insert into ${tableName} set ?`;
-      connection.connect();
       pool.query(sql, entity, (error, results) => {
         if (error) {
           reject(error);
@@ -117,9 +116,7 @@ module.exports = {
 
   update: (tableName, idField, entity, id) => {
     return new Promise((resolve, reject) => {
-      var connection = createConnection();
       var sql = `update ${tableName} set ? where ${idField} = ?`;
-      connection.connect();
       pool.query(sql, [entity, id], (error, results, fields) => {
         if (error) {
           reject(error);
@@ -133,9 +130,7 @@ module.exports = {
 
   delete: (tableName, idField, id) => {
     return new Promise((resolve, reject) => {
-      var connection = createConnection();
       var sql = `delete from ${tableName} where ${idField} = ?`;
-      connection.connect();
       pool.query(sql, id, (error, results, fields) => {
         if (error) {
           reject(error);
@@ -150,10 +145,8 @@ module.exports = {
   //update isDelete = 1
   is_delete: (tableName, idField, id, status) => {
     return new Promise((resolve, reject) => {
-      var connection = createConnection();
       var is_deleteField = "is_delete";
       var sql = `update ${tableName} set ${is_deleteField} = ${status} where ${idField} = ?`;
-      connection.connect();
       pool.query(sql, id, (error, results, fields) => {
         if (error) {
           reject(error);

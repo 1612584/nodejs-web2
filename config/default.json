@@ -4,7 +4,7 @@
       "user": "zESNnM745D",
       "password": "qHfenUThBm",
       "database": "zESNnM745D",
-      "connectionLimit":5
+      "connectionLimit":4
     },
     "paginate": {
       "default": 6
